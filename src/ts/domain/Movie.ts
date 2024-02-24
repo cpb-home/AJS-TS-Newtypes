@@ -1,11 +1,15 @@
-export default class Movie {
+import Buyable from './Buyable';
+
+export default class Movie implements Buyable {
   constructor(
-    rusTitle: string,
-    engTitle: string,
-    year: number,
-    country: string,
-    tagline: string,
-    genre: [],
-    time: number
+    readonly id: number,
+    readonly name: string,
+    readonly engName: string,
+    readonly year: number,
+    readonly country: string,
+    readonly tagline: string,
+    readonly genre: string[],
+    readonly time: number,
+    readonly price: number,
   ) { }
 }
